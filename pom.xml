@@ -122,12 +122,6 @@
 <!--				</exclusion>-->
 <!--			</exclusions>-->
 <!--		</dependency>-->
-  <!-- Quantum core dependency -->
-  		<dependency>
-    		<groupId>com.perfecto</groupId>
-    		<artifactId>quantum-core</artifactId>
-    		<version>3.1.3</version> <!-- Adjust based on your version -->
-  		</dependency>
 
   <!-- QAF for reporting -->
   		<dependency>
