@@ -2,7 +2,7 @@
 <suite name="Web Demo Suite" verbose="0" parallel="tests"
 	thread-count="100">
 	<listeners>
-		<listener class-name="com.qmetry.qaf.automation.testng.report.ReporterListener"/>
+		<listener class-name="com.quantum.listeners.QuantumReportiumListener" />
 	</listeners>
 
 	<test name="Web Scenarios Chrome Test" enabled="true" verbose="0">
