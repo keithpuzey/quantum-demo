@@ -29,7 +29,7 @@ HEADERS = {
 
 
 def trigger_test():
-    print("🔄 Triggering Runscope test...")
+    print("🔄 Triggering API Monitoring test...")
     response = requests.post(RUNSCOPE_TRIGGER_URL)
     response.raise_for_status()
     data = response.json()
