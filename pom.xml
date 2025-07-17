@@ -54,6 +54,7 @@
 
 				<configuration>
 					<argLine>-Dfile.encoding=${project.build.sourceEncoding}</argLine>
+					<reportsDirectory>${project.build.directory}/test-results</reportsDirectory>
 					<systemPropertyVariables>
 						<!--<application.properties.file>
 							resources/application.properties</application.properties.file>-->
