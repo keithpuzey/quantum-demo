@@ -76,7 +76,10 @@
 			<name>Perfecto mobile</name>
 			<url>https://repo1.perfectomobile.com/public/repositories/maven</url>
 		</repository>
-
+		  <repository>
+    		<id>qmetry</id>
+    		<url>https://qmetry.github.io/mvn-repo/</url>
+  		</repository>
 	</repositories>
 
 	<dependencies>
