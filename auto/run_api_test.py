@@ -57,7 +57,7 @@ def trigger_test():
 def poll_until_complete(api_test_run_url):
     status = "working"
     attempts = 0
-    max_attempts = 60  # ~5 minutes timeout (60*5s)
+    max_attempts = 60  # ~5 minutes timeout (60 * 5s)
 
     while status in ("init", "working"):
         if attempts >= max_attempts:
@@ -75,13 +75,27 @@ def poll_until_complete(api_test_run_url):
     return data
 
 
-def generate_junit_xml(test_name, final_result, test_run_url):
+def generate_junit_xml(test_name, final_result, test_run_url, duration_seconds):
     if not os.path.exists(RESULT_DIR):
         os.makedirs(RESULT_DIR)
 
-    testsuite = ET.Element("testsuite", name="Runscope Test Suite", tests="1",
-                           failures="0" if final_result == "pass" else "1")
-    testcase = ET.SubElement(testsuite, "testcase", classname="Runscope", name=test_name)
+    testsuite = ET.Element(
+        "testsuite",
+        name="Runscope Test Suite",
+        tests="1",
+        failures="0" if final_result == "pass" else "1",
+        errors="0",
+        skipped="0",
+        time=f"{duration_seconds:.3f}"
+    )
+
+    testcase = ET.SubElement(
+        testsuite,
+        "testcase",
+        classname="Runscope",
+        name=test_name,
+        time=f"{duration_seconds:.3f}"
+    )
 
     if final_result != "pass":
         ET.SubElement(testcase, "failure", message=f"Runscope test result: {final_result}")
@@ -94,11 +108,18 @@ def generate_junit_xml(test_name, final_result, test_run_url):
 
 
 def main():
+    start_time = time.time()
+
     api_test_run_url, test_name, test_run_url = trigger_test()
     status_response = poll_until_complete(api_test_run_url)
+
+    duration = time.time() - start_time
     final_result = status_response.get("data", {}).get("result")
+
     print(f"✅ Final result: {final_result}")
-    generate_junit_xml(test_name, final_result, test_run_url)
+    print(f"🕒 Duration: {duration:.2f} seconds")
+
+    generate_junit_xml(test_name, final_result, test_run_url, duration)
 
 
 if __name__ == "__main__":
