@@ -122,7 +122,19 @@
 <!--				</exclusion>-->
 <!--			</exclusions>-->
 <!--		</dependency>-->
+  <!-- Quantum core dependency -->
+  		<dependency>
+    		<groupId>com.perfecto</groupId>
+    		<artifactId>quantum-core</artifactId>
+    		<version>3.1.3</version> <!-- Adjust based on your version -->
+  		</dependency>
 
+  <!-- QAF for reporting -->
+  		<dependency>
+    		<groupId>com.qmetry</groupId>
+    		<artifactId>qaf</artifactId>
+    		<version>3.1.15</version> <!-- Match the version Quantum supports -->
+  		</dependency>
 
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
