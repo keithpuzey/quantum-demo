@@ -71,7 +71,7 @@ def generate_junit_xml(test_name, result, report_url, reason=None, duration_seco
         testsuite,
         "testcase",
         classname="PerfectoTest",
-        name=test_name,
+        name=f"TC50 - {test_name}",
         time=f"{duration_seconds:.3f}"
     )
 

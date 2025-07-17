@@ -93,7 +93,7 @@ def generate_junit_xml(test_name, final_result, test_run_url, duration_seconds):
         testsuite,
         "testcase",
         classname="Runscope",
-        name=test_name,
+        name=f"TC49 - {test_name}",
         time=f"{duration_seconds:.3f}"
     )
 
