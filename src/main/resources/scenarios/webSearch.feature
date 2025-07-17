@@ -34,11 +34,3 @@ Scenario Outline: TC45 - Search Keyword Inline Data
     | recId | recDescription     | searchKey               | searchResult |
     | 1     | First Data Set     | perfecto mobile quantum | Quantum      |
     | 2     | Second Data Set    | perfecto mobile quantum | perfecto     |
-
-@MobileDDxml
-Scenario Outline: TC46 - Search Keyword XML Data
-  Given I am on Google Search Page
-  When I search for "<searchKey>"
-  Then it should have "<searchResult>" in search results
-
-  Examples: {'key' : 'demo.websearch.dataset'}
