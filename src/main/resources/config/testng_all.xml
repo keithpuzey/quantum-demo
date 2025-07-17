@@ -18,7 +18,7 @@
 		<parameter name="env.resources" value="src/main/resources/common" />
 		<groups>
 			<run>
-				<include name="@mobile" />
+				<include name="@Mobile" />
 			</run>
 		</groups>
 		<classes>
@@ -33,7 +33,7 @@
 		<parameter name="perfecto.capabilities.automationName" value="Appium"/>
 		<groups>
 			<run>
-				<include name="@Web" />
+				<include name="@Mobile" />
 				<include name="@first" />
 				<include name="@sampleTestCase" />
 				<include name="@locators" />
