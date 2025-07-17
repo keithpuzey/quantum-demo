@@ -2,7 +2,7 @@
 Feature: Google Search
 
 @MobileDDcsv
-Scenario Outline: Search Keyword CSV Data
+Scenario Outline: TC54 Search Keyword CSV Data
   Given I am on Google Search Page
   When I search for "<searchKey>"
   Then it should have "<searchResult>" in search results
@@ -11,14 +11,14 @@ Scenario Outline: Search Keyword CSV Data
   #Examples: {'datafile' : 'src/main/resources/data/testData.xls', 'sheetname':'${datasheet}', 'filter':'searchResult=="Quantum"'}
 
 @MobileSearch @retry @TC-1
-Scenario: Search Quantum
+Scenario: TC43 Search Quantum
   Given I am on Google Search Page
   When I search for "perfecto mobile quantum"
   Then it should have "perfecto" in search results
   Then I am on Google Search Page
 
 @MobileResultsList
-Scenario: Search Quantum with results
+Scenario: TC65 Search Quantum with results
   Given I am on Google Search Page
   When I search for "perfecto mobile quantum"
   Then it should have following search results:
@@ -26,7 +26,7 @@ Scenario: Search Quantum with results
     | Quantum |
 
 @MobileDD
-Scenario Outline: Search Keyword Inline Data
+Scenario Outline: TC51 Search Keyword Inline Data
   Given I am on Google Search Page
   When I search for "<searchKey>"
   Then it should have "<searchResult>" in search results
@@ -36,7 +36,7 @@ Scenario Outline: Search Keyword Inline Data
     | 2     | Second Data Set    | perfecto mobile quantum | perfecto     |
 
 @MobileDDxml
-Scenario Outline: Search Keyword XML Data
+Scenario Outline: TC43 Search Keyword XML Data
   Given I am on Google Search Page
   When I search for "<searchKey>"
   Then it should have "<searchResult>" in search results
@@ -44,7 +44,7 @@ Scenario Outline: Search Keyword XML Data
   Examples: {'key' : 'demo.websearch.dataset'}
 
 @TestDataTable
-Scenario Outline: Search Quantum data table
+Scenario Outline: TC54 Search Quantum data table
   Given I am on Google Search Page
   And I have the following books in the store:
     | title                                | author      |
