@@ -98,7 +98,7 @@ def generate_junit_xml(test_name, final_result, test_run_url, duration_seconds):
     )
 
     if final_result != "pass":
-        ET.SubElement(testcase, "failure", message=f"Runscope test result: {final_result}")
+        ET.SubElement(testcase, "failure", message=f"API Monitoring test result: {final_result}")
 
     ET.SubElement(testcase, "system-out").text = f"Test Report URL: {test_run_url}"
 
