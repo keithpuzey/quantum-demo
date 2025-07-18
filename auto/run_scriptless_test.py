@@ -6,10 +6,10 @@ from config import PerfectoKey
 
 # Config
 perfecto_cloud = 'demo.perfectomobile.com'
-script_key = 'PUBLIC:DBankMobileRegistration.xml'
+script_key = 'PUBLIC:-Demo-Examples/TC50-FindDoctor-Mobile.xml'
 RESULT_DIR = "test-results"
 RESULT_FILE = os.path.join(RESULT_DIR, "perfecto-result.xml")
-TEST_NAME = "DBankMobileRegistration"
+TEST_NAME = "TC50-FindDoctor-Mobile"
 
 # Start the Perfecto script execution
 def start_test():

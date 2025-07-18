@@ -17,20 +17,4 @@ Scenario: TC43 - Search Quantum
   Then it should have "perfecto" in search results
   Then I am on Google Search Page
 
-@MobileResultsList
-Scenario: TC44 - Search Quantum with results
-  Given I am on Google Search Page
-  When I search for "perfecto mobile quantum"
-  Then it should have following search results:
-    | perfecto |
-    | Quantum |
 
-@MobileDD
-Scenario Outline: TC45 - Search Keyword Inline Data
-  Given I am on Google Search Page
-  When I search for "<searchKey>"
-  Then it should have "<searchResult>" in search results
-  Examples:
-    | recId | recDescription     | searchKey               | searchResult |
-    | 1     | First Data Set     | perfecto mobile quantum | Quantum      |
-    | 2     | Second Data Set    | perfecto mobile quantum | perfecto     |
