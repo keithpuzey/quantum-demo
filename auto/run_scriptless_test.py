@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 from config import PerfectoKey
 
 # Config
-perfecto_cloud = 'demo.perfectomobile.com'
+perfecto_cloud = 'beta.perfectomobile.com'
 script_key = 'PUBLIC:-Demo-Examples/TC50-FindDoctor-Mobile.xml'
 RESULT_DIR = "test-results"
 RESULT_FILE = os.path.join(RESULT_DIR, "perfecto-result.xml")
