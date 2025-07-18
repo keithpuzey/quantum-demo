@@ -5,11 +5,11 @@ import xml.etree.ElementTree as ET
 from config import PerfectoKey
 
 # Config
-perfecto_cloud = 'beta.perfectomobile.com'
+perfecto_cloud = 'demo.perfectomobile.com'
 script_key = 'PUBLIC:-Demo-Examples/TC45-LoginPage-Mobile.xml'
 RESULT_DIR = "test-results"
 RESULT_FILE = os.path.join(RESULT_DIR, "perfecto-result.xml")
-TEST_NAME = "TC50-FindDoctor-Mobile"
+TEST_NAME = "TC45-LoginPage-Mobile"
 
 # Start the Perfecto script execution
 def start_test():
