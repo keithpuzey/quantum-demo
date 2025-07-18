@@ -18,9 +18,10 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.qmetry.qaf.automation.ui.WebDriverTestBase;
 
 
 @QAFTestStepProvider
@@ -55,6 +56,7 @@ public class GoogleStepDefs {
 
 	@When("^I search for \"([^\"]*)\"$")
 	public void search(String searchKey) {
+    WebDriver driver = new WebDriverTestBase().getDriver();
     WebElement searchBox = driver.findElement(By.name("q"));
     searchBox.sendKeys(searchKey + Keys.ENTER);
     }
