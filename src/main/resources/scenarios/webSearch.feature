@@ -1,11 +1,11 @@
 @Mobile
-Feature: Google Search
+Feature: Bing Search
 
 @MobileSearch @retry @TC-1
-Scenario: TC43 - Search Quantum
-  Given I am on Google Search Page
+Scenario: TC43 - Find a Doctor
+  Given I am on Bing site
   When I search for "perfecto mobile quantum"
   Then it should have "perfecto" in search results
-  Then I am on Google Search Page
+  Then I am on Bing Search Page
 
 
