@@ -141,7 +141,7 @@
 		<dependency>
     		<groupId>com.qmetry</groupId>
     		<artifactId>qaf</artifactId>
-    		<version>3.1.16</version> <!-- or whichever version you're using -->
+    		<version>3.2.0</version> <!-- or whichever version you're using -->
 		</dependency>
 
 	</dependencies>
