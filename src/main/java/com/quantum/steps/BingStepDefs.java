@@ -13,9 +13,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Keys;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
-import cucumber.api.java.en.Then;
+import com.qmetry.qaf.automation.step.QAFGiven;
+import com.qmetry.qaf.automation.step.QAFWhen;
+import com.qmetry.qaf.automation.step.QAFThen;
 
 import static org.testng.Assert.assertTrue;
 
