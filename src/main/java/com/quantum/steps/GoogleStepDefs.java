@@ -15,6 +15,7 @@ import com.quantum.utils.ReportUtils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
 
 @QAFTestStepProvider
 public class GoogleStepDefs {
@@ -46,9 +47,10 @@ public class GoogleStepDefs {
 	}
 
 	@When("^I search for \"([^\"]*)\"$")
-	public void I_search_for(String searchKey) throws Throwable {
-		googlePage.search(searchKey);
-	}
+	public void search(String searchKey) {
+    WebElement searchBox = driver.findElement(By.name("q"));
+    searchBox.sendKeys(searchKey + Keys.ENTER);
+    }
 
 	@Then("^it should have \"([^\"]*)\" in search results$")
 	public void it_should_have_in_search_results(String result) throws Throwable {
