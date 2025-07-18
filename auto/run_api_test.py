@@ -18,7 +18,7 @@ else:
     AUTH_TOKEN = api_token
 
 # Configurable values
-RUNSCOPE_TRIGGER_URL = "https://api.runscope.com/radar/9c198f58-f1ea-4588-ba34-a23fc788f5bd/trigger?runscope_environment=4ea9d338-f8c4-4c90-be0e-a48b5c75aafa"
+RUNSCOPE_TRIGGER_URL = "https://api.runscope.com/radar/b06d52bf-15b0-472d-a9a5-cb9fe8d630f2/trigger?runscope_environment=a1adcdc6-5a43-413a-b8ec-f4e90f0e2a01"
 
 RESULT_DIR = "test-results"
 RESULT_FILE = os.path.join(RESULT_DIR, "runscope-result.xml")
@@ -93,7 +93,7 @@ def generate_junit_xml(test_name, final_result, test_run_url, duration_seconds):
         testsuite,
         "testcase",
         classname="Runscope",
-        name=f" {test_name}",
+        name=f"{test_name}",
         time=f"{duration_seconds:.3f}"
     )
 
